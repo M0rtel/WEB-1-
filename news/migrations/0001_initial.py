@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='Articles',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(default='Буба', max_length=50, verbose_name='Название')),
-                ('anons', models.CharField(default='Буба', max_length=250, verbose_name='Анонс')),
+                ('title', models.CharField(max_length=50, verbose_name='Название')),
+                ('anons', models.CharField(max_length=250, verbose_name='Анонс')),
                 ('full_text', models.TextField(verbose_name='Статья')),
                 ('date', models.DateTimeField(verbose_name='Дата публикации')),
             ],

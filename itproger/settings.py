@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [          # При каждом новом созданном приложении нужно добавить его в этот список! (Как news и main)
     'news',
     'main',
     'django.contrib.admin',
@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [        #
+STATICFILES_DIRS = [        # Важная херь!!! Тоже нужно всегда добавлять её
     BASE_DIR / "static",    #
 ]                           #
 
