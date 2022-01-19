@@ -9,6 +9,9 @@ class Articles(models.Model): # Таблица баз данных
     def __str__(self):      # Это чтобы удобно выводились названия таблиц
         return self.title
 
+    def get_absolute_url(self):
+        return f'/news/{self.id}'
+
     class Meta: # Название, которое будет высвечиваться в базе данный на странице admin
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
